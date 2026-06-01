@@ -36,7 +36,7 @@ export function calculateTCO(
 
   const annualFuelCost = isElectric
     ? rangeKm && rangeKm > 0
-      ? (annualKm / rangeKm) * electricityTariffPerKwh * (rangeKm / 1) // kWh/km × km
+      ? (annualKm / rangeKm) * electricityTariffPerKwh // spec: annualKm / rangeKm × tariff
       : 0
     : mileageKmpl && mileageKmpl > 0
       ? (annualKm / mileageKmpl) * fuelPricePerLitre

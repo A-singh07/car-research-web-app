@@ -18,15 +18,18 @@ export interface BuyerPersona {
   };
 }
 
+// Raw answers hold the option `value` strings emitted by the quiz UI
+// (e.g. q3 = "under_8", q4 = "true"). They are mapped to persona fields by
+// the store (incrementally, for F3/F5) and by buildPersonaFromAnswers (on submit).
 export interface QuizAnswers {
   q1?: FamilySize;
   q2?: PrimaryUse;
-  q3?: { min: number; max: number };
-  q4?: boolean;
+  q3?: string;
+  q4?: string;
   q5?: string[];
   cq_kids_age?: "toddler" | "school_age" | "grown_up";
-  cq_parking?: boolean;
-  cq_road_trips?: boolean;
+  cq_parking?: string;
+  cq_road_trips?: string;
 }
 
 export interface Contradiction {
