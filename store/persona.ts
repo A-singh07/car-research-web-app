@@ -65,15 +65,15 @@ export const usePersonaStore = create<PersonaState>()(
           updates.annualKm = USE_TO_ANNUAL_KM[use] ?? 15000;
         }
         if (key === "q3") {
-          const budget = value as { min: number; max: number };
+          const budget = BUDGET_RANGES[value as string] ?? { min: 0, max: 1500000 };
           updates.budgetMin = budget.min;
           updates.budgetMax = budget.max;
         }
-        if (key === "q4") updates.safetyPriority = value as boolean;
+        if (key === "q4") updates.safetyPriority = value === "true";
         if (key === "q5") updates.softPreferences = value as string[];
         if (key === "cq_kids_age") updates.conditionals = { ...prev.conditionals, kidsAge: value as BuyerPersona["conditionals"]["kidsAge"] };
-        if (key === "cq_parking") updates.conditionals = { ...prev.conditionals, parkingTight: value as boolean };
-        if (key === "cq_road_trips") updates.conditionals = { ...prev.conditionals, roadTrips: value as boolean };
+        if (key === "cq_parking") updates.conditionals = { ...prev.conditionals, parkingTight: value === "true" };
+        if (key === "cq_road_trips") updates.conditionals = { ...prev.conditionals, roadTrips: value === "true" };
 
         set({ rawAnswers, ...updates });
       },

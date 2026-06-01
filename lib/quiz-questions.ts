@@ -165,7 +165,7 @@ export function buildPersonaFromAnswers(answers: QuizAnswers): Partial<BuyerPers
     CITY_COMMUTE: 12000, FAMILY_TRIPS: 15000, MIXED: 18000, HIGHWAY: 25000,
   };
 
-  const budget = answers.q3 ? BUDGET_MAP[answers.q3 as string] : { min: 0, max: 1500000 };
+  const budget = answers.q3 ? BUDGET_MAP[answers.q3] : { min: 0, max: 1500000 };
   return {
     familySize: answers.q1 as BuyerPersona["familySize"],
     primaryUse: answers.q2 as BuyerPersona["primaryUse"],
@@ -177,8 +177,8 @@ export function buildPersonaFromAnswers(answers: QuizAnswers): Partial<BuyerPers
     fuelPreference: "NONE" as BuyerPersona["fuelPreference"],
     conditionals: {
       kidsAge: answers.cq_kids_age,
-      parkingTight: answers.cq_parking === "true" || answers.cq_parking === true,
-      roadTrips: answers.cq_road_trips === "true" || answers.cq_road_trips === true,
+      parkingTight: answers.cq_parking === "true",
+      roadTrips: answers.cq_road_trips === "true",
     },
   };
 }
