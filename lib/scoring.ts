@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { VariantWithModel, MatchedCar } from "@/types/car";
 import type { BuyerPersona } from "@/types/persona";
 
