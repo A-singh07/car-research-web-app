@@ -1,4 +1,5 @@
-// Learn more: https://pris.ly/d/prisma-schema
+// Car Research Platform — Phase 1 MVP
+// Features: Guided Quiz · Comparison · TCO Calculator
 
 generator client {
   provider = "prisma-client"
@@ -9,110 +10,240 @@ datasource db {
   provider = "postgresql"
 }
 
-model Make {
-  id        String   @id @default(cuid())
-  name      String   @unique
-  slug      String   @unique
-  logoUrl   String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  models CarModel[]
-}
-
-model CarModel {
-  id          String   @id @default(cuid())
-  name        String
-  slug        String
-  makeId      String
-  bodyType    BodyType
-  fuelType    FuelType
-  description String?
-  imageUrl    String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  make     Make  @relation(fields: [makeId], references: [id])
-  variants Variant[]
-
-  @@unique([makeId, slug])
-}
-
-model Variant {
-  id           String      @id @default(cuid())
-  name         String
-  modelId      String
-  year         Int
-  priceMin     Int
-  priceMax     Int
-  transmission Transmission
-  engineCC     Int?
-  powerBhp     Float?
-  torqueNm     Float?
-  mileageKmpl  Float?
-  seatingCap   Int?
-  createdAt    DateTime    @default(now())
-  updatedAt    DateTime    @updatedAt
-
-  model   CarModel @relation(fields: [modelId], references: [id])
-  reviews Review[]
-
-  @@index([modelId, year])
-}
-
-model Review {
-  id        String   @id @default(cuid())
-  variantId String
-  rating    Float
-  title     String
-  body      String
-  pros      String[]
-  cons      String[]
-  authorId  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  variant Variant @relation(fields: [variantId], references: [id])
-  author  User    @relation(fields: [authorId], references: [id])
-
-  @@index([variantId])
-  @@index([authorId])
-}
-
-model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  reviews Review[]
-}
-
-enum BodyType {
-  SEDAN
-  HATCHBACK
-  SUV
-  MUV
-  COUPE
-  CONVERTIBLE
-  WAGON
-  PICKUP
-}
+// ─── ENUMS ───────────────────────────────────────────
 
 enum FuelType {
   PETROL
   DIESEL
+  CNG
   ELECTRIC
   HYBRID
-  CNG
-  LPG
 }
 
 enum Transmission {
   MANUAL
-  AUTOMATIC
-  CVT
   AMT
+  CVT
   DCT
+  AUTOMATIC
+}
+
+enum BodyType {
+  HATCHBACK
+  SEDAN
+  SUV
+  MUV
+  COUPE
+}
+
+enum Segment {
+  A
+  B
+  C
+  D
+}
+
+enum ServiceTier {
+  WIDE
+  MODERATE
+  LIMITED
+}
+
+enum PrimaryUse {
+  CITY_COMMUTE
+  FAMILY_TRIPS
+  HIGHWAY
+  MIXED
+}
+
+enum FamilySize {
+  SOLO
+  COUPLE
+  FAMILY
+  LARGE_FAMILY
+}
+
+enum FuelPreference {
+  PETROL
+  DIESEL
+  CNG
+  ELECTRIC
+  HYBRID
+  NONE
+}
+
+enum QuizStatus {
+  IN_PROGRESS
+  COMPLETED
+  ABANDONED
+}
+
+// ─── USERS & BUYER IDENTITY ──────────────────────────
+
+model User {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email     String   @unique @db.VarChar(255)
+  name      String?  @db.VarChar(100)
+  city      String?  @db.VarChar(100)
+  createdAt DateTime @default(now())
+
+  buyerProfiles BuyerProfile[]
+  quizSessions  QuizSession[]
+  comparisons   Comparison[]
+}
+
+model BuyerProfile {
+  id              String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId          String         @db.Uuid
+  primaryUse      PrimaryUse
+  familySize      FamilySize
+  budgetMin       Int
+  budgetMax       Int
+  annualKm        Int
+  fuelPreference  FuelPreference
+  safetyPriority  Boolean        @default(false)
+  softPreferences Json
+  createdAt       DateTime       @default(now())
+
+  user         User          @relation(fields: [userId], references: [id])
+  quizSessions QuizSession[]
+  comparisons  Comparison[]
+
+  @@index([userId])
+}
+
+// ─── CAR CATALOGUE ───────────────────────────────────
+
+model Make {
+  id                 String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name               String      @unique @db.VarChar(100)
+  countryOfOrigin    String?     @db.VarChar(100)
+  serviceNetworkTier ServiceTier
+
+  models Model[]
+}
+
+model Model {
+  id       String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  makeId   String   @db.Uuid
+  name     String   @db.VarChar(100)
+  bodyType BodyType
+  segment  Segment
+
+  make     Make      @relation(fields: [makeId], references: [id])
+  variants Variant[]
+
+  @@index([makeId])
+  @@unique([makeId, name])
+}
+
+model Variant {
+  id                  String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  modelId             String       @db.Uuid
+  name                String       @db.VarChar(100)
+  fuelType            FuelType
+  transmission        Transmission
+  priceExshowroom     Int
+  priceOnroadEstimate Int?
+  seatingCapacity     Int
+  bootSpaceLitres     Int?
+  mileageKmpl         Decimal?     @db.Decimal(5, 2)
+  rangeKm             Int?
+  powerBhp            Int?
+  torqueNm            Int?
+  groundClearanceMm   Int?
+  turningRadiusM      Decimal?     @db.Decimal(4, 2)
+  ncapRating          Int?
+  airbagCount         Int?
+  featuresList        Json?
+  useCaseTags         Json?
+  isActive            Boolean      @default(true)
+  updatedAt           DateTime     @default(now()) @updatedAt
+
+  model            Model             @relation(fields: [modelId], references: [id])
+  ownershipCost    OwnershipCost?
+  shortlistResults ShortlistResult[]
+  comparisonItems  ComparisonItem[]
+
+  @@index([modelId])
+  @@index([fuelType])
+  @@index([priceExshowroom, priceOnroadEstimate])
+  @@unique([modelId, name])
+}
+
+model OwnershipCost {
+  id                   String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  variantId            String   @unique @db.Uuid
+  serviceCostPerVisit  Int?
+  serviceIntervalKm    Int?
+  tyreReplacementCost  Int?
+  depreciationYear1    Decimal? @db.Decimal(4, 3)
+  depreciationAnnual   Decimal? @db.Decimal(4, 3)
+  insuranceIdvEstimate Int?
+  updatedAt            DateTime @default(now()) @updatedAt
+
+  variant Variant @relation(fields: [variantId], references: [id])
+}
+
+// ─── FEATURE 2: QUIZ ─────────────────────────────────
+
+model QuizSession {
+  id          String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId      String?    @db.Uuid
+  profileId   String?    @db.Uuid
+  answers     Json
+  status      QuizStatus @default(IN_PROGRESS)
+  completedAt DateTime?
+
+  user             User?             @relation(fields: [userId], references: [id])
+  buyerProfile     BuyerProfile?     @relation(fields: [profileId], references: [id])
+  shortlistResults ShortlistResult[]
+
+  @@index([userId])
+  @@index([profileId])
+}
+
+model ShortlistResult {
+  id          String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  sessionId   String @db.Uuid
+  variantId   String @db.Uuid
+  matchScore  Int
+  matchReason String
+  rank        Int
+
+  session QuizSession @relation(fields: [sessionId], references: [id])
+  variant Variant     @relation(fields: [variantId], references: [id])
+
+  @@index([sessionId])
+  @@index([sessionId, rank])
+}
+
+// ─── FEATURE 3: COMPARISON ───────────────────────────
+
+model Comparison {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId     String?  @db.Uuid
+  profileId  String?  @db.Uuid
+  shareToken String   @unique @db.VarChar(32)
+  createdAt  DateTime @default(now())
+
+  user            User?            @relation(fields: [userId], references: [id])
+  buyerProfile    BuyerProfile?    @relation(fields: [profileId], references: [id])
+  comparisonItems ComparisonItem[]
+
+  @@index([userId])
+  @@index([shareToken])
+}
+
+model ComparisonItem {
+  id           String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  comparisonId String @db.Uuid
+  variantId    String @db.Uuid
+  position     Int
+
+  comparison Comparison @relation(fields: [comparisonId], references: [id])
+  variant    Variant    @relation(fields: [variantId], references: [id])
+
+  @@index([comparisonId])
+  @@unique([comparisonId, variantId])
 }

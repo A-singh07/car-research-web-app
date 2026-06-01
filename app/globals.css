@@ -1,8 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f9fb;
+  --foreground: #111827;
+
+  /* Navy palette */
+  --navy-950: #050d1a;
+  --navy-900: #0a1628;
+  --navy-800: #0f2040;
+  --navy-700: #163158;
+  --navy-600: #1e4480;
+  --navy-500: #2563b0;
+  --navy-400: #3b82d0;
+  --navy-300: #93c5f0;
+  --navy-200: #bfdbfe;
+  --navy-100: #dbeafe;
+  --navy-50:  #eff6ff;
+
+  /* Amber accent */
+  --accent-600: #d97706;
+  --accent-500: #f59e0b;
+  --accent-400: #fbbf24;
+  --accent-200: #fde68a;
+  --accent-100: #fef3c7;
+
+  /* Semantic colours */
+  --color-winner-bg:    #f0fdf4;
+  --color-winner-text:  #166534;
+  --color-winner-ring:  #16a34a;
+  --color-nudge-bg:     #fffbeb;
+  --color-nudge-border: #f59e0b;
+  --color-match-high:   #16a34a;
+  --color-match-mid:    #d97706;
+  --color-match-low:    #9ca3af;
+  --color-danger:       #dc2626;
 }
 
 @theme inline {
@@ -10,17 +41,49 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Navy */
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-navy-500: var(--navy-500);
+  --color-navy-400: var(--navy-400);
+  --color-navy-300: var(--navy-300);
+  --color-navy-200: var(--navy-200);
+  --color-navy-100: var(--navy-100);
+  --color-navy-50:  var(--navy-50);
+
+  /* Accent */
+  --color-accent-600: var(--accent-600);
+  --color-accent-500: var(--accent-500);
+  --color-accent-400: var(--accent-400);
+  --color-accent-200: var(--accent-200);
+  --color-accent-100: var(--accent-100);
+
+  /* Semantic */
+  --color-winner-bg:    var(--color-winner-bg);
+  --color-winner-text:  var(--color-winner-text);
+  --color-winner-ring:  var(--color-winner-ring);
+  --color-nudge-bg:     var(--color-nudge-bg);
+  --color-nudge-border: var(--color-nudge-border);
+  --color-match-high:   var(--color-match-high);
+  --color-match-mid:    var(--color-match-mid);
+  --color-match-low:    var(--color-match-low);
+  --color-danger:       var(--color-danger);
+
+  /* Radius */
+  --radius-card: 0.75rem;
+  --radius-pill: 9999px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }

@@ -1,0 +1,404 @@
+{
+  "makes": [
+    { "name": "Maruti Suzuki", "countryOfOrigin": "India", "serviceNetworkTier": "WIDE" },
+    { "name": "Tata Motors", "countryOfOrigin": "India", "serviceNetworkTier": "WIDE" },
+    { "name": "Hyundai", "countryOfOrigin": "South Korea", "serviceNetworkTier": "WIDE" },
+    { "name": "Kia", "countryOfOrigin": "South Korea", "serviceNetworkTier": "MODERATE" },
+    { "name": "Honda", "countryOfOrigin": "Japan", "serviceNetworkTier": "MODERATE" },
+    { "name": "Toyota", "countryOfOrigin": "Japan", "serviceNetworkTier": "MODERATE" },
+    { "name": "Mahindra", "countryOfOrigin": "India", "serviceNetworkTier": "WIDE" }
+  ],
+  "models": [
+    { "makeName": "Maruti Suzuki", "name": "Swift", "bodyType": "HATCHBACK", "segment": "B" },
+    { "makeName": "Maruti Suzuki", "name": "Baleno", "bodyType": "HATCHBACK", "segment": "B" },
+    { "makeName": "Maruti Suzuki", "name": "Brezza", "bodyType": "SUV", "segment": "B" },
+    { "makeName": "Maruti Suzuki", "name": "Ertiga", "bodyType": "MUV", "segment": "B" },
+    { "makeName": "Tata Motors", "name": "Nexon", "bodyType": "SUV", "segment": "B" },
+    { "makeName": "Tata Motors", "name": "Punch", "bodyType": "SUV", "segment": "A" },
+    { "makeName": "Tata Motors", "name": "Tiago EV", "bodyType": "HATCHBACK", "segment": "A" },
+    { "makeName": "Hyundai", "name": "i20", "bodyType": "HATCHBACK", "segment": "B" },
+    { "makeName": "Hyundai", "name": "Creta", "bodyType": "SUV", "segment": "C" },
+    { "makeName": "Kia", "name": "Seltos", "bodyType": "SUV", "segment": "C" },
+    { "makeName": "Honda", "name": "City", "bodyType": "SEDAN", "segment": "C" },
+    { "makeName": "Toyota", "name": "Innova Crysta", "bodyType": "MUV", "segment": "D" },
+    { "makeName": "Mahindra", "name": "XUV300", "bodyType": "SUV", "segment": "B" }
+  ],
+  "variants": [
+    {
+      "makeName": "Maruti Suzuki", "modelName": "Swift", "name": "VXI",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 699000, "priceOnroadEstimate": 820000,
+      "seatingCapacity": 5, "bootSpaceLitres": 268,
+      "mileageKmpl": 23.2, "powerBhp": 89, "torqueNm": 113,
+      "groundClearanceMm": 163, "turningRadiusM": 4.8,
+      "ncapRating": 3, "airbagCount": 2,
+      "featuresList": ["abs", "rear_parking_sensor", "am_fm_radio"],
+      "useCaseTags": ["city", "budget", "easy_park"]
+    },
+    {
+      "makeName": "Maruti Suzuki", "modelName": "Swift", "name": "ZXI",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 809000, "priceOnroadEstimate": 948000,
+      "seatingCapacity": 5, "bootSpaceLitres": 268,
+      "mileageKmpl": 23.2, "powerBhp": 89, "torqueNm": 113,
+      "groundClearanceMm": 163, "turningRadiusM": 4.8,
+      "ncapRating": 3, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "touchscreen", "rear_camera", "alloy_wheels"],
+      "useCaseTags": ["city", "budget", "easy_park", "fun"]
+    },
+    {
+      "makeName": "Maruti Suzuki", "modelName": "Baleno", "name": "Delta",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 664000, "priceOnroadEstimate": 785000,
+      "seatingCapacity": 5, "bootSpaceLitres": 318,
+      "mileageKmpl": 22.35, "powerBhp": 89, "torqueNm": 113,
+      "groundClearanceMm": 170, "turningRadiusM": 4.8,
+      "ncapRating": 2, "airbagCount": 2,
+      "featuresList": ["abs", "rear_parking_sensor", "touchscreen"],
+      "useCaseTags": ["city", "budget", "easy_park", "good_mileage"]
+    },
+    {
+      "makeName": "Maruti Suzuki", "modelName": "Baleno", "name": "Alpha",
+      "fuelType": "PETROL", "transmission": "AMT",
+      "priceExshowroom": 849000, "priceOnroadEstimate": 993000,
+      "seatingCapacity": 5, "bootSpaceLitres": 318,
+      "mileageKmpl": 22.35, "powerBhp": 89, "torqueNm": 113,
+      "groundClearanceMm": 170, "turningRadiusM": 4.8,
+      "ncapRating": 2, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "touchscreen", "sunroof", "alloy_wheels", "premium_audio"],
+      "useCaseTags": ["city", "premium", "easy_park", "good_mileage"]
+    },
+    {
+      "makeName": "Maruti Suzuki", "modelName": "Brezza", "name": "VXI",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 854000, "priceOnroadEstimate": 1005000,
+      "seatingCapacity": 5, "bootSpaceLitres": 328,
+      "mileageKmpl": 19.8, "powerBhp": 102, "torqueNm": 137,
+      "groundClearanceMm": 198, "turningRadiusM": 5.2,
+      "ncapRating": 4, "airbagCount": 2,
+      "featuresList": ["abs", "rear_camera", "touchscreen", "high_ground_clearance"],
+      "useCaseTags": ["city", "family", "budget"]
+    },
+    {
+      "makeName": "Maruti Suzuki", "modelName": "Brezza", "name": "ZXI+",
+      "fuelType": "PETROL", "transmission": "AUTOMATIC",
+      "priceExshowroom": 1199000, "priceOnroadEstimate": 1402000,
+      "seatingCapacity": 5, "bootSpaceLitres": 328,
+      "mileageKmpl": 17.4, "powerBhp": 102, "torqueNm": 137,
+      "groundClearanceMm": 198, "turningRadiusM": 5.2,
+      "ncapRating": 4, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "sunroof", "360_camera", "adas", "wireless_charging"],
+      "useCaseTags": ["city", "family", "premium", "safe"]
+    },
+    {
+      "makeName": "Maruti Suzuki", "modelName": "Ertiga", "name": "VXI",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 892000, "priceOnroadEstimate": 1048000,
+      "seatingCapacity": 7, "bootSpaceLitres": 209,
+      "mileageKmpl": 20.3, "powerBhp": 103, "torqueNm": 137,
+      "groundClearanceMm": 185, "turningRadiusM": 5.4,
+      "ncapRating": 3, "airbagCount": 2,
+      "featuresList": ["abs", "7_seater", "rear_ac_vents", "touchscreen"],
+      "useCaseTags": ["family", "large_family", "city", "highway"]
+    },
+    {
+      "makeName": "Tata Motors", "modelName": "Nexon", "name": "Smart",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 799000, "priceOnroadEstimate": 940000,
+      "seatingCapacity": 5, "bootSpaceLitres": 350,
+      "mileageKmpl": 17.4, "powerBhp": 120, "torqueNm": 170,
+      "groundClearanceMm": 209, "turningRadiusM": 5.2,
+      "ncapRating": 5, "airbagCount": 2,
+      "featuresList": ["abs", "5_star_ncap", "high_ground_clearance", "rear_camera"],
+      "useCaseTags": ["city", "safe", "family", "budget"]
+    },
+    {
+      "makeName": "Tata Motors", "modelName": "Nexon", "name": "Fearless+",
+      "fuelType": "PETROL", "transmission": "AUTOMATIC",
+      "priceExshowroom": 1449000, "priceOnroadEstimate": 1690000,
+      "seatingCapacity": 5, "bootSpaceLitres": 350,
+      "mileageKmpl": 17.0, "powerBhp": 120, "torqueNm": 170,
+      "groundClearanceMm": 209, "turningRadiusM": 5.2,
+      "ncapRating": 5, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "5_star_ncap", "adas", "sunroof", "wireless_charging", "360_camera"],
+      "useCaseTags": ["safe", "family", "premium", "city", "highway"]
+    },
+    {
+      "makeName": "Tata Motors", "modelName": "Punch", "name": "Adventure",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 659000, "priceOnroadEstimate": 775000,
+      "seatingCapacity": 5, "bootSpaceLitres": 366,
+      "mileageKmpl": 18.8, "powerBhp": 86, "torqueNm": 113,
+      "groundClearanceMm": 187, "turningRadiusM": 5.1,
+      "ncapRating": 5, "airbagCount": 2,
+      "featuresList": ["abs", "5_star_ncap", "high_ground_clearance", "touchscreen"],
+      "useCaseTags": ["city", "budget", "safe", "easy_park"]
+    },
+    {
+      "makeName": "Tata Motors", "modelName": "Tiago EV", "name": "Medium Range",
+      "fuelType": "ELECTRIC", "transmission": "AUTOMATIC",
+      "priceExshowroom": 999000, "priceOnroadEstimate": 1121000,
+      "seatingCapacity": 5, "bootSpaceLitres": 242,
+      "rangeKm": 250, "powerBhp": 55, "torqueNm": 114,
+      "groundClearanceMm": 165, "turningRadiusM": 4.9,
+      "ncapRating": 4, "airbagCount": 2,
+      "featuresList": ["abs", "ev", "fast_charge", "regen_braking", "connected_car"],
+      "useCaseTags": ["city", "ev", "good_mileage", "budget"]
+    },
+    {
+      "makeName": "Hyundai", "modelName": "i20", "name": "Magna",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 731000, "priceOnroadEstimate": 858000,
+      "seatingCapacity": 5, "bootSpaceLitres": 311,
+      "mileageKmpl": 20.35, "powerBhp": 82, "torqueNm": 114,
+      "groundClearanceMm": 165, "turningRadiusM": 4.9,
+      "ncapRating": 3, "airbagCount": 2,
+      "featuresList": ["abs", "rear_camera", "touchscreen", "alloy_wheels"],
+      "useCaseTags": ["city", "budget", "easy_park", "premium"]
+    },
+    {
+      "makeName": "Hyundai", "modelName": "i20", "name": "Asta (O) Turbo",
+      "fuelType": "PETROL", "transmission": "DCT",
+      "priceExshowroom": 1150000, "priceOnroadEstimate": 1340000,
+      "seatingCapacity": 5, "bootSpaceLitres": 311,
+      "mileageKmpl": 20.0, "powerBhp": 120, "torqueNm": 172,
+      "groundClearanceMm": 165, "turningRadiusM": 4.9,
+      "ncapRating": 3, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "sunroof", "adas", "wireless_charging", "premium_audio", "360_camera"],
+      "useCaseTags": ["city", "premium", "fun", "easy_park"]
+    },
+    {
+      "makeName": "Hyundai", "modelName": "Creta", "name": "EX",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 1100000, "priceOnroadEstimate": 1289000,
+      "seatingCapacity": 5, "bootSpaceLitres": 433,
+      "mileageKmpl": 16.8, "powerBhp": 115, "torqueNm": 144,
+      "groundClearanceMm": 190, "turningRadiusM": 5.3,
+      "ncapRating": 5, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "5_star_ncap", "rear_camera", "touchscreen"],
+      "useCaseTags": ["family", "city", "safe", "highway"]
+    },
+    {
+      "makeName": "Hyundai", "modelName": "Creta", "name": "SX Tech",
+      "fuelType": "PETROL", "transmission": "CVT",
+      "priceExshowroom": 1799000, "priceOnroadEstimate": 2094000,
+      "seatingCapacity": 5, "bootSpaceLitres": 433,
+      "mileageKmpl": 16.0, "powerBhp": 115, "torqueNm": 144,
+      "groundClearanceMm": 190, "turningRadiusM": 5.3,
+      "ncapRating": 5, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "5_star_ncap", "adas", "sunroof", "360_camera", "wireless_charging", "connected_car", "premium_audio"],
+      "useCaseTags": ["family", "premium", "safe", "highway", "city"]
+    },
+    {
+      "makeName": "Kia", "modelName": "Seltos", "name": "HTE",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 1089000, "priceOnroadEstimate": 1278000,
+      "seatingCapacity": 5, "bootSpaceLitres": 433,
+      "mileageKmpl": 16.5, "powerBhp": 115, "torqueNm": 144,
+      "groundClearanceMm": 190, "turningRadiusM": 5.3,
+      "ncapRating": 3, "airbagCount": 2,
+      "featuresList": ["abs", "rear_camera", "touchscreen", "high_ground_clearance"],
+      "useCaseTags": ["family", "city", "highway", "budget"]
+    },
+    {
+      "makeName": "Kia", "modelName": "Seltos", "name": "GTX+",
+      "fuelType": "PETROL", "transmission": "DCT",
+      "priceExshowroom": 1999000, "priceOnroadEstimate": 2330000,
+      "seatingCapacity": 5, "bootSpaceLitres": 433,
+      "mileageKmpl": 16.1, "powerBhp": 140, "torqueNm": 242,
+      "groundClearanceMm": 190, "turningRadiusM": 5.3,
+      "ncapRating": 3, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "panoramic_sunroof", "adas", "360_camera", "bose_audio", "wireless_charging", "connected_car"],
+      "useCaseTags": ["premium", "fun", "highway", "family"]
+    },
+    {
+      "makeName": "Honda", "modelName": "City", "name": "V",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 1162000, "priceOnroadEstimate": 1359000,
+      "seatingCapacity": 5, "bootSpaceLitres": 506,
+      "mileageKmpl": 17.8, "powerBhp": 121, "torqueNm": 145,
+      "groundClearanceMm": 165, "turningRadiusM": 5.1,
+      "ncapRating": 4, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "rear_camera", "touchscreen", "alloy_wheels"],
+      "useCaseTags": ["highway", "family", "premium", "good_resale"]
+    },
+    {
+      "makeName": "Honda", "modelName": "City", "name": "ZX",
+      "fuelType": "PETROL", "transmission": "CVT",
+      "priceExshowroom": 1530000, "priceOnroadEstimate": 1786000,
+      "seatingCapacity": 5, "bootSpaceLitres": 506,
+      "mileageKmpl": 17.2, "powerBhp": 121, "torqueNm": 145,
+      "groundClearanceMm": 165, "turningRadiusM": 5.1,
+      "ncapRating": 4, "airbagCount": 6,
+      "featuresList": ["abs", "6_airbags", "sunroof", "connected_car", "wireless_charging", "premium_audio"],
+      "useCaseTags": ["highway", "premium", "family", "good_resale"]
+    },
+    {
+      "makeName": "Toyota", "modelName": "Innova Crysta", "name": "GX 7-Seater",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 1999000, "priceOnroadEstimate": 2340000,
+      "seatingCapacity": 7, "bootSpaceLitres": 300,
+      "mileageKmpl": 10.0, "powerBhp": 164, "torqueNm": 245,
+      "groundClearanceMm": 178, "turningRadiusM": 5.9,
+      "ncapRating": null, "airbagCount": 7,
+      "featuresList": ["7_airbags", "7_seater", "captain_seats", "rear_ac", "touchscreen", "alloy_wheels"],
+      "useCaseTags": ["large_family", "highway", "premium"]
+    },
+    {
+      "makeName": "Mahindra", "modelName": "XUV300", "name": "W6",
+      "fuelType": "PETROL", "transmission": "MANUAL",
+      "priceExshowroom": 899000, "priceOnroadEstimate": 1059000,
+      "seatingCapacity": 5, "bootSpaceLitres": 257,
+      "mileageKmpl": 17.0, "powerBhp": 110, "torqueNm": 200,
+      "groundClearanceMm": 180, "turningRadiusM": 5.0,
+      "ncapRating": 5, "airbagCount": 7,
+      "featuresList": ["7_airbags", "5_star_ncap", "sunroof", "alloy_wheels", "rear_camera"],
+      "useCaseTags": ["city", "safe", "fun", "family"]
+    },
+    {
+      "makeName": "Mahindra", "modelName": "XUV300", "name": "W8 (O)",
+      "fuelType": "DIESEL", "transmission": "MANUAL",
+      "priceExshowroom": 1199000, "priceOnroadEstimate": 1405000,
+      "seatingCapacity": 5, "bootSpaceLitres": 257,
+      "mileageKmpl": 20.0, "powerBhp": 117, "torqueNm": 300,
+      "groundClearanceMm": 180, "turningRadiusM": 5.0,
+      "ncapRating": 5, "airbagCount": 7,
+      "featuresList": ["7_airbags", "5_star_ncap", "sunroof", "alloy_wheels", "connected_car", "adas"],
+      "useCaseTags": ["safe", "highway", "fun", "good_mileage"]
+    }
+  ],
+  "ownershipCosts": [
+    {
+      "makeName": "Maruti Suzuki", "variantName": "Swift VXI",
+      "serviceCostPerVisit": 4500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 14000, "depreciationYear1": 0.15, "depreciationAnnual": 0.10,
+      "insuranceIdvEstimate": 699000
+    },
+    {
+      "makeName": "Maruti Suzuki", "variantName": "Swift ZXI",
+      "serviceCostPerVisit": 4800, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 15000, "depreciationYear1": 0.15, "depreciationAnnual": 0.10,
+      "insuranceIdvEstimate": 809000
+    },
+    {
+      "makeName": "Maruti Suzuki", "variantName": "Baleno Delta",
+      "serviceCostPerVisit": 4500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 14000, "depreciationYear1": 0.15, "depreciationAnnual": 0.10,
+      "insuranceIdvEstimate": 664000
+    },
+    {
+      "makeName": "Maruti Suzuki", "variantName": "Baleno Alpha",
+      "serviceCostPerVisit": 5000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 16000, "depreciationYear1": 0.15, "depreciationAnnual": 0.10,
+      "insuranceIdvEstimate": 849000
+    },
+    {
+      "makeName": "Maruti Suzuki", "variantName": "Brezza VXI",
+      "serviceCostPerVisit": 5500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 18000, "depreciationYear1": 0.15, "depreciationAnnual": 0.10,
+      "insuranceIdvEstimate": 854000
+    },
+    {
+      "makeName": "Maruti Suzuki", "variantName": "Brezza ZXI+",
+      "serviceCostPerVisit": 6000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 20000, "depreciationYear1": 0.15, "depreciationAnnual": 0.10,
+      "insuranceIdvEstimate": 1199000
+    },
+    {
+      "makeName": "Maruti Suzuki", "variantName": "Ertiga VXI",
+      "serviceCostPerVisit": 5500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 18000, "depreciationYear1": 0.15, "depreciationAnnual": 0.10,
+      "insuranceIdvEstimate": 892000
+    },
+    {
+      "makeName": "Tata Motors", "variantName": "Nexon Smart",
+      "serviceCostPerVisit": 6000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 18000, "depreciationYear1": 0.18, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 799000
+    },
+    {
+      "makeName": "Tata Motors", "variantName": "Nexon Fearless+",
+      "serviceCostPerVisit": 7500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 22000, "depreciationYear1": 0.18, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 1449000
+    },
+    {
+      "makeName": "Tata Motors", "variantName": "Punch Adventure",
+      "serviceCostPerVisit": 5500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 16000, "depreciationYear1": 0.18, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 659000
+    },
+    {
+      "makeName": "Tata Motors", "variantName": "Tiago EV Medium Range",
+      "serviceCostPerVisit": 3500, "serviceIntervalKm": 15000,
+      "tyreReplacementCost": 16000, "depreciationYear1": 0.20, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 999000
+    },
+    {
+      "makeName": "Hyundai", "variantName": "i20 Magna",
+      "serviceCostPerVisit": 5000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 16000, "depreciationYear1": 0.16, "depreciationAnnual": 0.11,
+      "insuranceIdvEstimate": 731000
+    },
+    {
+      "makeName": "Hyundai", "variantName": "i20 Asta (O) Turbo",
+      "serviceCostPerVisit": 6500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 18000, "depreciationYear1": 0.16, "depreciationAnnual": 0.11,
+      "insuranceIdvEstimate": 1150000
+    },
+    {
+      "makeName": "Hyundai", "variantName": "Creta EX",
+      "serviceCostPerVisit": 6500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 20000, "depreciationYear1": 0.16, "depreciationAnnual": 0.11,
+      "insuranceIdvEstimate": 1100000
+    },
+    {
+      "makeName": "Hyundai", "variantName": "Creta SX Tech",
+      "serviceCostPerVisit": 8000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 24000, "depreciationYear1": 0.16, "depreciationAnnual": 0.11,
+      "insuranceIdvEstimate": 1799000
+    },
+    {
+      "makeName": "Kia", "variantName": "Seltos HTE",
+      "serviceCostPerVisit": 6500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 20000, "depreciationYear1": 0.18, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 1089000
+    },
+    {
+      "makeName": "Kia", "variantName": "Seltos GTX+",
+      "serviceCostPerVisit": 8500, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 26000, "depreciationYear1": 0.18, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 1999000
+    },
+    {
+      "makeName": "Honda", "variantName": "City V",
+      "serviceCostPerVisit": 6000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 18000, "depreciationYear1": 0.16, "depreciationAnnual": 0.11,
+      "insuranceIdvEstimate": 1162000
+    },
+    {
+      "makeName": "Honda", "variantName": "City ZX",
+      "serviceCostPerVisit": 7000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 20000, "depreciationYear1": 0.16, "depreciationAnnual": 0.11,
+      "insuranceIdvEstimate": 1530000
+    },
+    {
+      "makeName": "Toyota", "variantName": "Innova Crysta GX 7-Seater",
+      "serviceCostPerVisit": 10000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 28000, "depreciationYear1": 0.12, "depreciationAnnual": 0.08,
+      "insuranceIdvEstimate": 1999000
+    },
+    {
+      "makeName": "Mahindra", "variantName": "XUV300 W6",
+      "serviceCostPerVisit": 6000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 18000, "depreciationYear1": 0.18, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 899000
+    },
+    {
+      "makeName": "Mahindra", "variantName": "XUV300 W8 (O)",
+      "serviceCostPerVisit": 7000, "serviceIntervalKm": 10000,
+      "tyreReplacementCost": 20000, "depreciationYear1": 0.18, "depreciationAnnual": 0.12,
+      "insuranceIdvEstimate": 1199000
+    }
+  ]
+}
